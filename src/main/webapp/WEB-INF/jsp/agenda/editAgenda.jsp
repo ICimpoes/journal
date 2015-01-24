@@ -34,7 +34,7 @@ $(document).ready(
 		$.getJSON('daysOfWeek.json', {
 			ajax : 'true'
 		}, function(data){
-			var html = '<option value="">--Please select one--</option>';
+			var html = '';
 			var len = data.length;
 			for (var i = 0; i < len; i++) {
 				html += '<option value="' + data[i] + '">'
@@ -42,12 +42,11 @@ $(document).ready(
 			}
 			html += '</option>';
 			$('#daysOfWeek').html(html);
-			$('#pre').text(exercises);
+			$('#pre').text(exercises[0].description);
 		});
 	});
 
-var exercises;
-$.getJSON("../exercise/getAllExercises.json", function(data) {
+var exercises = $.getJSON("../exercise/getAllExercises.json", function(data) {
 	exercises = data;
 });
 </script>
