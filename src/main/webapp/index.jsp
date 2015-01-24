@@ -8,12 +8,17 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/main-style.css">
 <title></title>
 <body>
-	<p>Hi!</p>
-	<a href="exercise/view.html">View Exercises</a>
-	<a href="exercise/new.html">New Exercise</a>
-	<a href="agenda/view.html">View Agenda</a>
-	<a href="agenda/new.html">New Agenda</a>
+	<div id="container">
+	<nav>
+		<a href="/exercise/view.html"><div>View Exercises</div></a>
+		<a href="/exercise/new.html"><div>New Exercise</div></a>
+		<a href="/agenda/view.html"><div>View Agenda</div></a>
+		<a href="/agenda/new.html"><div>New Agenda</div></a>
+	</nav>
+		<p>Hi!</p>
+	</div>
 </body>
 </html>
