@@ -2,29 +2,33 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/main-style.css'/>">
 <title>Insert title here</title>
 </head>
 <body>
-	<form:form commandName="newAgenda" action="save.html">
-		<table>
-			<tr>
-				<th>DayOfWeek</th>
-			</tr>
-			<tr>
-				<td>
-					<form:select id="daysOfWeek" path="dayOfWeek">
-					</form:select>
-				</td>
-			</tr>
-		</table>
-		<input type="submit" value="newAgenda">
-	</form:form>
-	<pre id="pre"></pre>
+	<div id="container">
+		<c:import url="/common/nav-bar.jsp" />
+		<section id="main-section">
+			<form:form commandName="newAgenda" action="save.html">
+				<table>
+					<tr>
+						<th>DayOfWeek</th>
+					</tr>
+					<tr>
+						<td><form:select id="daysOfWeek" path="dayOfWeek">
+							</form:select></td>
+					</tr>
+				</table>
+				<input type="submit" value="newAgenda">
+			</form:form>
+			<pre id="pre"></pre>
+		</section>
+	</div>
 </body>
 <script type="text/javascript" src="../js/jquery.js"></script>
 <script type="text/javascript">
