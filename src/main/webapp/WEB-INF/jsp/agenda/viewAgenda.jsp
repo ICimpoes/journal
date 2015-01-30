@@ -13,16 +13,35 @@
 </head>
 <body>
 	<div id="container">
-	<c:import url="/common/nav-bar.jsp"/>
+		<c:import url="/common/nav-bar.jsp"/>
 		<section id="main-section">
-			<h1>${selectedAgenda }</h1>
-			<table id="agendaTable">
-			</table>
-			<a href="new.html"><button>New Agenda</button></a> <a
-				href="../index.jsp"><button>Home</button></a>
-			<button onclick="showAgendas()">Refresh</button>
-			<button id="delete-agenda" onclick="deleteAgenda()">Delete</button>
+			<h1>${selectedAgenda.dayOfWeek }</h1>
+			<c:choose>
+				<c:when test="${not empty selectedAgenda.exercises}">
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Description</th>
+						</tr>
+						<c:forEach items="${selectedAgenda.exercises }" var="exercise">
+							<tr>
+								<td>${exercise.name }</td>
+								<td>${exercise.description }</td>
+							</tr>
+						</c:forEach>
+					</table>
+				</c:when>
+				<c:otherwise>
+					<h6>No Exercises!</h6>
+				</c:otherwise>
+			</c:choose>
 		</section>
 	</div>
+	
 </body>
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/jquery-ui-1.11.2.custom/jquery-ui.js"></script>
+<script type="text/javascript">
+
+</script>
 </html>

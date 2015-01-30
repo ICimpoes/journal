@@ -16,8 +16,7 @@
 		<c:import url="/common/nav-bar.jsp"/>
 		<section id="main-section">
 			<table id="exercisesTable"></table>
-			<a href="new.html"><button>New Exercise</button></a>
-			<a href="../index.jsp"><button>Home</button></a>
+			<a href="new.html"><button>New Exercise</button>
 		</section>
 	</div>
 </body>

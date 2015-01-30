@@ -18,10 +18,7 @@
 			<div id="dialog-confirm"></div>
 			<table id="agendaTable">
 			</table>
-			<a href="new.html"><button>New Agenda</button></a> <a
-				href="/index.jsp"><button>Home</button></a>
-			<button onclick="showAgendas()">Refresh</button>
-			<button id="delete-agenda" onclick="deleteAgenda()">Delete</button>
+			<a href="new.html"><button>New Agenda</button></a>
 		</section>
 	</div>
 	
