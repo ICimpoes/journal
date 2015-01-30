@@ -8,9 +8,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.Lob;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.Type;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -29,7 +30,8 @@ public abstract class AbstractExercise {
 	@Column(name = "name", length = 20, nullable = false, unique = true)
 	private String name;
 	
-	@Lob
+	@Column(name = "description")
+	@Type(type = "text")
 	private String description;
 
 	public Long getId() {
