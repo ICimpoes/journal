@@ -12,13 +12,7 @@ body {
 }
 
 #container {
-	/*background: url("../img/background.jpg") no-repeat;*/
-	width: 2000px;
-	min-height: 1000px;
-	margin-top: 0;
-	top: 0px;
-	margin-left: auto;
-	margin-right: auto;
+
 }
 
 nav,  #main-section {
@@ -30,15 +24,15 @@ nav,  #main-section {
 }
 
 #nav-pannel {
+	box-shadow: 0px 2px 15px 10px rgba(255, 255, 255, 0.3);
 	box-sizing: border-box;
-	background-color: rgba(0, 0, 0, 0.5);
 	height: 60px;
 	border-top: outset 1px;
 	border-bottom: none;
 }
 
-#nav-pannel > a {
-	color: rgba(0,0,0,0);
+a {
+	text-decoration: none;
 }
 
 .nav-div  {
@@ -48,18 +42,15 @@ nav,  #main-section {
 	padding: 15px;
 	font-size: 25px;
 	color: #ffffff;
-	border-top-left-radius: 30px;
-	border-top-right-radius: 30px;
-	border-color: rgba(0, 0, 0, 0);
-	border-width: 5px;
-	border-style: solid;
-	margin: 0px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	margin: 5px;
 	padding-top: 7px;
 }
 
 .nav-div:HOVER {
-	border-color: #000000;
-	background-color: rgba(255, 255, 255, 0.2);
+	color: #000000;
+	background-color: rgba(255, 255, 255, 0.7);
 }
 
 #main-section {
@@ -68,5 +59,21 @@ nav,  #main-section {
 	padding: 50px;
 	background-color: rgba(255,255,255,0.9);
 	min-height: 1200px;
-	box-shadow: 0px 15px 15px 5px rgba(0,0,0,0.5);
+	box-shadow: 0px 15px 15px 10px rgba(0,0,0,0.5);
+}
+
+.delete {
+	border: none;
+	background-color: rgba(0,0,0,0);
+	height: 60px;
+	width: 60px;
+	font-size: 60px;
+	content: '/f068';
+	color: #ff0000;
+
+}
+
+.fa-minus:hover:BEFORE {
+	background-color: #000000;
+	color: #ffffff;
 }
